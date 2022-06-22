@@ -30,16 +30,19 @@ while(count < 5)
     }
 
     else if (a % 3 == 0)
+
     {
         continue;
     }
 
     else if (a % 5 == 0)
+
     {
         continue;
     }
-    
-    else if (a * a % 10 != 1)
+
+    if (a * a % 10 != 1)
+
     {
         for (i = 7; i <= Math.Sqrt(a); i += 2)
             {
