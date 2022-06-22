@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Введите имя пользователя: ");
 string username = Console.ReadLine();
 
-if(username == "Еврей")
+if(username.ToLower() == "еврей")
 {
     Console.WriteLine("Ассалам алейкум!");
 }
