@@ -1,26 +1,47 @@
-﻿int count = 0;
+﻿Console.WriteLine("Введите нижний предел");
+string mintemp = Console.ReadLine();
+int min = Convert.ToInt32(mintemp);
+Console.WriteLine("Введите верхний предел");
+string maxtemp = Console.ReadLine();
+int max = Convert.ToInt32(maxtemp);
+
+int count = 0;
 int i = 7;
 
 while(count < 5)
-{
-    count_div = 0;
-    a = rnd.Next();
+
+{   
+    int count_div = 0;
+    Random c = new Random();
+    int a = c.Next(min, max + 1);
     
-    if (a == 1) or (a == 2); or (a == 3); or (a == 5);
-    {   
-        Console.WritLine(a);
+    if (a == 1 ^ a == 2 ^ a == 3 ^ a == 5)
+
+    {  
+        Console.WriteLine(a);
         count++;
         continue;
     }
 
-    if (a % 2 == 0) or (a % 3 == 0); or (a % 4 == 0); or (a % 5 == 0);
+    if (a % 2 == 0)
+
     {
         continue;
     }
 
-    if (a * a % 10 != 1)
+    else if (a % 3 == 0)
     {
-        while (i <= Math.sqrt(a));
+        continue;
+    }
+
+    else if (a % 5 == 0)
+    {
+        continue;
+    }
+    
+    else if (a * a % 10 != 1)
+    {
+        for (i = 7; i <= Math.Sqrt(a); i += 2)
             {
                 if (a % i == 0)
                 {
@@ -31,22 +52,21 @@ while(count < 5)
                 {
                     break;
                 }
-                i++;
             }
         if (count_div == 0)
         {
-            b = a;
-            sum = 0;
-            while (b => 10)
+            int b = a;
+            int sum = 0;
+            while (b >= 10)
             {
                 sum = sum + b % i;
                 b = b / i;
             }
 
             sum = sum + b;
-            if (10 < sum < 20)
+            if (10 < sum & sum < 20)
             {
-                Console.WritLine(a);
+                Console.WriteLine(a);
                 count++;
             }
         }
