@@ -29,6 +29,4 @@ while(distance > 10)
 
 count = Convert.ToInt32(count);
 
-Console.Write("Собака пробежит ");
-Console.Write(count);
-Console.WriteLine(" раз");
+Console.Write($"Собака пробежит {count} раз");
